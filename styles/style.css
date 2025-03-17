@@ -18,8 +18,8 @@
     }
 
     .header{
-        padding: 0.5% 0% 0% 9%; /* padding: 1% 0% 0% 9%; Margen horizontal para que esten uniforme a la misma exactitud como del PARRAFO */
-        transform: scale(1); /* transform: scale(0.8); Esto nos ayuda a hacer que parezca mas alejado la vision y no tan pegado */
+        padding: 1% 0% 0% 9%; /* padding: 1% 0% 0% 9%; Margen horizontal para que esten uniforme a la misma exactitud como del PARRAFO */
+        transform: scale(0.9); /* transform: scale(0.8); Esto nos ayuda a hacer que parezca mas alejado la vision y no tan pegado */
     }
 
     .header__menu{
