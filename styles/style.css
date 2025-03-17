@@ -1,0 +1,173 @@
+   
+    @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+    :root{    /*Declaramos una variable que contenga los colores mas usadas en nuestra Página Web. */
+        --color-primario: #000000;
+        --color-secundario: #F6F6F6;
+        --color-terciario: #00FA9A;
+        --color-sombreado: #272727; /*Color del HOVER cuando el mouse esta encima del boton */
+        --color-borde: #22D4FD;
+
+        --fuente-Monserrat: "Montserrat", sans-serif;
+        --fuente-Krona: "Krona One", sans-serif;
+    }
+
+   *{
+        padding: 0;
+        margin: 0;
+    }
+
+    .header{
+        padding: 0.5% 0% 0% 9%; /* padding: 1% 0% 0% 9%; Margen horizontal para que esten uniforme a la misma exactitud como del PARRAFO */
+        transform: scale(1); /* transform: scale(0.8); Esto nos ayuda a hacer que parezca mas alejado la vision y no tan pegado */
+    }
+
+    .header__menu{
+        display: flex;
+        gap: 80px;
+    }
+
+    .header__menu__links{
+        font-family: var(--fuente-Monserrat);
+        font-size: 1.5rem;
+        font-weight: 300PX; /*Grosor del Texto */
+        text-decoration: none;
+        color: var(--color-terciario);
+    }
+
+    .header__menu__links:hover{
+        background-color: var(--color-sombreado);
+        padding: 3px;
+        border: 1px solid var(--color-borde);
+        border-radius: 8%;
+    }
+
+    body {
+        background-color: var(--color-primario) ; /* El #00000 Se usa de forma HEXAGESIMAL */
+        color: var(--color-secundario);
+        box-sizing: border-box; /* Para que este bien cuadrado y no se salga de la caja del texto (Este FIJO independiente del height, widt,)*/
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    .presentacion{  
+        padding: 0% 9%; /*padding: 0% 9%;  */
+        display: flex; /* Estructura ESTANDAR del FLEXBOX*/
+        align-items: center;
+        justify-content: space-between; 
+        transform: scale(0.9); /* transform: scale(0.8); Esto nos ayuda a hacer que parezca mas alejado la vision y no tan pegado */
+        gap: 82px; /* El espacio entre el TEXTO y la IMAGEN */
+        
+    }
+
+    .presentacion_contenido{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+    }
+
+    .presentacion__contenido__titulo{
+        font-size: 2.25rem;
+        font-family: var(--fuente-Krona);
+        
+    }
+
+    .titulo-destacar{
+        color: var(--color-terciario);
+    }
+
+    .presentacion__contenido__texto{
+        font-size: 1.5rem;
+        font-family: var(--fuente-Monserrat);
+
+    }
+
+    .presentacion__contenido__texto__palabra{
+        color: var(--color-terciario);
+        font-family: var(--fuente-Krona);
+
+    }
+
+    .presentacion__enlaces{
+        display: flex;     /* coloca los cuadrados uno al lado del otro */
+        justify-content: space-between; 
+        flex-direction: column; /*define que la dirección del display: flex debe ser en "columna".*/
+        align-items: center;    /*Los alinea al centro en un eje horizontal*/
+        gap: 32px;         /* agrega espacios iguales entre cada BOTON */
+    }
+
+    .presentacion__enlaces__subtitulo{
+        font-family: var(--fuente-Krona);
+        font-size: 1.5rem;
+        font-weight: 400;
+    }   
+
+    .presentacion__enlaces__links{
+        width: 50%; /*  el ancho de los botones */
+        text-align: center; /* Centra solo el TEXTO*/
+        padding: 13px 0; /* Para hacer que sea vea menos GRANDE visualmente y mas pequeño visualmente ESE ES EL PADDING QUE SE TIENE QUE CAMBIAR*/
+        border-radius: 8px; /* Forma de la ESQUINAS del borde */
+        font-family: var(--fuente-Monserrat); /* Tipo de letra */
+        font-size: 1.5rem; /* Tamaño del texto */
+        font-weight: 600; /* Para que este en SEMIBOLD */ /* Grosor del texto */
+        text-decoration: none; /*Para que no aparezca el subrayado debajo de INSTAGRAM o GITHUB*/
+        color: var(--color-secundario); /* Color de las letras de los botones */
+        border: 2px solid var(--color-terciario);  /* Tamaño, Forma y Color del borde de los botones */
+        display: flex;  /* Ajusta el ICONO y el TEXTO a la misma altura */
+        justify-content: center; /* Centra el ELEMENTO en el eje horizontal */ /*ADEMAS DE DARLES UN ESPACIO ENTRE CADA UNO, LOS CENTRA.*/
+        gap: 16px; /*Espacio horizontal entre cada boton */
+    }
+
+    .presentacion__enlaces__links:hover{ /* Cogemos la clase de los links para aplicar el hover */
+        background-color: var(--color-sombreado);
+        padding: 2.5%; /* Le da un efecto como de un boton haciendolo mas grande cuando el cursor esta encima del boton */
+        border: 2px solid var(--color-borde);
+    }
+
+    .presentacion__imagen{
+        width: 80%;
+        
+    }
+
+    .footer{
+        background-color: var(--color-terciario);
+        /* padding: 5px; */
+        color: var(--color-primario);
+        text-align: center;
+        font-family: var(--fuente-Monserrat);
+        font-size: 1.5rem; /*Lo pasamos a REM para que sea reponsive: 1REM=16PX*/
+        font-weight: 350;
+        margin-top: auto;
+        
+                    /*Borramos: position: absolute; Para que asi deje de aparecer en el centro*/
+        bottom: 0; /*0 significa abajo en el footer y 1 arriba en el heather.*/
+        width: auto; /*Hace que se ajuste automaticamente el footer en la pag. WEB */
+        padding: 20px; /*Esto fue clave para que el FOOTER sea visible sin tener que SCROLLEAR ABAJO*/
+    }
+
+    @media (max-width: 1200px ) { /* cuando la pantalla es más pequeña de 1.200 píxeles, sucede lo siguiente: */
+            
+        .header{
+            padding: 5% 0%; /*  padding: 5% 0%; Espacio entre lo de ARRIBA con el MENU de INICIO */
+        }
+
+        .header__menu{
+            justify-content: center; /*Centramos el MENU al centro de manera horizontal*/
+        }
+
+        .presentacion{
+            flex-direction: column-reverse; /* la imagen debe estar encima del texto */
+            padding: 3% 0%;    
+        }
+
+        .presentacion_contenido{
+            width: auto; /* El ancho se ajusta a la pantalla */ 
+            /* width: 100%; Cumple la misma funcion  aplicando el 100% en el ancho de la página responsiva, 
+            obtendrá el mismo resultado que con width: auto; y se ajustará automáticamente al tamaño de la pantalla. */
+        }
+
+
+    }
